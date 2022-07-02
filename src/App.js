@@ -10,7 +10,7 @@ const App = () => {
 	const [scheme, setScheme] = useState('bright_light')
 	const [activePanel, setActivePanel] = useState('home');
 	const [fetchedUser, setUser] = useState(null);
-	const [popout, setPopout] = useState(null);
+	const [popout, setPopout] = useState(<ScreenSpinner size='large' />);
 
 	useEffect(() => {
 		bridge.subscribe(({ detail: { type, data }}) => {
